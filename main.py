@@ -2,16 +2,13 @@
 import click
 import scrape
 
-# @click.command()
-# @click.argument('name', default='guest')
-# @click.argument('age', type=int)
-# def hello(name, age):
-#     click.echo(f'{name} is {age} years old')
 
-
-def hello():
-    r = scrape.Obj()
-    r.getRandomChallenge()
+@click.command()
+@click.option('--n', default=1, type=int, show_default=True, help="The number of questions generated")
+@click.option("--diff", default="EZ", type=click.Choice(['EZ', 'MD', 'H']),  help="The difficulty of the questions")
+def hello(n, diff):
+    num = int(n)
+    diff_lvl = str(diff)
 
 
 if __name__ == '__main__':
