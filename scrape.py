@@ -1,4 +1,3 @@
-from operator import sub
 import praw
 from dotenv import load_dotenv
 import os
@@ -15,14 +14,17 @@ class Obj:
             client_id=self.client_id, client_secret=self.secret, user_agent=self.user_agent)
         self.reddit = r
 
-    def getRandomSubmission(self, lvl=""):
+    def getRandomSubmission(self, lvl):
         sub = None
         while True:
             submission = self.reddit.subreddit("dailyprogrammer").random()
 
             title = submission.title
 
-            if "Challenges" not in title and lvl in title and "Challenge" in title:
+            if "Challenges" in title:
+                continue
+
+            if "Challenge" in title and lvl in title:
                 sub = submission
                 break
         return sub
