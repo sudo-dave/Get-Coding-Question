@@ -31,7 +31,7 @@ def main(ctx, client_id, secret, user_agent, config_file):
     """
     A cli app that returns a coding question(s) file of varying difficulty. The 
     questions are web scrape from reddit. The subreddit that is scraped is 
-    from /r/dailyprogrammer.
+    from /r/dailyprogrammer. You can get free credentials from https://www.reddit.com/prefs/apps.
     """
     filename = os.path.expanduser(config_file)
     # add a contiadon if only or
@@ -53,6 +53,7 @@ def main(ctx, client_id, secret, user_agent, config_file):
 def config(ctx):
     """
     Store configuration values in a file.
+    Default file location : ~/.reddit.cfg
     """
     config_file = ctx.obj['config_file']
 
