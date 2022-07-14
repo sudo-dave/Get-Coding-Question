@@ -1,17 +1,11 @@
 import praw
-from dotenv import load_dotenv
 import os
 
 
 class Obj:
-    def __init__(self) -> None:
-        load_dotenv()
-
-        self.client_id = os.getenv("client_id")
-        self.secret = os.getenv("secret")
-        self.user_agent = os.getenv("user_agent")
+    def __init__(self, client_id, secret, user_agent) -> None:
         r = praw.Reddit(
-            client_id=self.client_id, client_secret=self.secret, user_agent=self.user_agent)
+            client_id=client_id, client_secret=secret, user_agent=user_agent)
         self.reddit = r
 
     def getRandomSubmission(self, lvl):
