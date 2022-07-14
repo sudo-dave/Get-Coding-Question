@@ -1,1 +1,3 @@
-# Get-Coding-Question
+# cli-codeQ
+A cli app that returns a coding question(s) file of varying difficulty. The questions are web scrape from reddit in real-time. The subreddit that is scraped is from /r/dailyprogrammer.
+
