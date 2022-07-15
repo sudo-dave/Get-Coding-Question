@@ -1,6 +1,5 @@
 from typing import Any
 import praw
-import os
 import random
 
 

@@ -30,12 +30,11 @@ CHOICE_DIFF = {"E": "Easy", "MD": "Intermediate", "H": "Hard"}
 def main(ctx, client_id, secret, user_agent, config_file):
     """
     A cli app that returns a coding question(s) file of varying difficulty. The 
-    questions are web scrape from reddit. The subreddit that is scraped is 
-    from /r/dailyprogrammer. You can get free credentials from https://www.reddit.com/prefs/apps.
+    questions are web scrape from reddit. The subreddit that is scraped is from /r/dailyprogrammer. You can get free credentials from https://www.reddit.com/prefs/apps.
     """
     filename = os.path.expanduser(config_file)
     # add a contiadon if only or
-    if not client_id and not secret and not user_agent and os.path.exists(filename):
+    if not client_id or not secret or not user_agent and os.path.exists(filename):
         file = open(filename, 'rb')
         cfg = pickle.load(file)
         file.close()
@@ -104,7 +103,6 @@ def get(ctx, n, diff):
     submissions = r.getRandomSubmissions(lvl, n)
     for submission in submissions:
         r.createFile(submission)
-        # click.echo("Question Generated...")
 
     click.echo("Done :-)")
 
