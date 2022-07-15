@@ -101,11 +101,10 @@ def get(ctx, n, diff):
     r = scrape.Obj(client_id, secret, user_agent)
 
     click.echo(f"--Getting {lvl} {txt_q}--")
-
-    for _ in range(n):
-        submission = r.getRandomSubmission(lvl)
+    submissions = r.getRandomSubmissions(lvl, n)
+    for submission in submissions:
         r.createFile(submission)
-        click.echo("Question Generated...")
+        # click.echo("Question Generated...")
 
     click.echo("Done :-)")
 
