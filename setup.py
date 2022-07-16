@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name="codeq",
     version='0.1',
-    py_modules=['cli'],
+    py_modules=['cli', 'scrape'],
     install_requires=[
         'Click', 'praw'
     ],
