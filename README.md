@@ -1,4 +1,8 @@
 # cli-codeQ
+
+## Demo
+<img src="Img/demo_cli.gif">
+
 ## Description
 A cli app that gets coding question(s) of varying difficulty. Questions are web scrape from reddit in real-time and saved as formated md files. The subreddit that it is scraped is from /r/dailyprogrammer. Choose an easy, intermediate, hard or random difficulty question.
 
