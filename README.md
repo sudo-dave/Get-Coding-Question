@@ -1,12 +1,12 @@
 # cli-codeQ
 
+## Description
+A cli app that gets coding question(s) of varying difficulty. Questions are web scrape from reddit in real-time and saved as formated md files. The subreddit that it is scraped is from /r/dailyprogrammer. Choose an easy, intermediate, hard or random difficulty question.
+
 ## Demo
 <img src="Img/demo_cli.gif">
 
 [Question_Example](Examples_Questions/Q#342.md)
-
-## Description
-A cli app that gets coding question(s) of varying difficulty. Questions are web scrape from reddit in real-time and saved as formated md files. The subreddit that it is scraped is from /r/dailyprogrammer. Choose an easy, intermediate, hard or random difficulty question.
 
 ### Installation 
 `$ git clone https://github.com/sudo-dave/cli-codeQ`
