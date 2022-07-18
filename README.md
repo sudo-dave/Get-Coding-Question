@@ -5,7 +5,7 @@ Get coding questions instantly. A cli app that gets a number of coding question(
 ## Demo
 <img src="Img/demo_cli.gif">
 
-[Question_Example](Examples_Questions/Q#342.md)
+[Question_Example](https://github.com/sudo-dave/cli-codeQ/blob/main/Examples_Questions/Q%23342.md)
 
 ### Installation 
 `$ git clone https://github.com/sudo-dave/cli-codeQ`
