@@ -7,22 +7,19 @@ Get coding questions instantly. A cli app that gets a number of coding question(
 
 [Question_Example](https://github.com/sudo-dave/cli-codeQ/blob/main/Examples_Questions/Q%23342.md)
 
-### Installation 
+### Installation
 `$ git clone https://github.com/sudo-dave/cli-codeQ`
 
 `$ python setup.py install`
 
 ### Configure
-`$ codeq config`
-
-`Please enter your client_id:XXXXXXXX`
-
-`Please enter your secret :XXXXXXXX`
-
-`Please enter your user_agent :XXXXXXXX`
-
-`Saved info @ /home/<user>/.reddit.cfg`
-
+```bash
+$ codeq config
+Please enter your client_id:XXXXXXXX
+Please enter your secret :XXXXXXXX
+Please enter your user_agent :XXXXXXXX
+Saved info @ /home/<user>/.reddit.cfg
+```
 ### Usage
 
 #### Usage: codeq [OPTIONS] COMMAND [ARGS]...
