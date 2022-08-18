@@ -1,6 +1,6 @@
 # cli-codeQ
 
-Get coding questions instantly. A cli app that gets a number of coding question(s) of varying difficulty. Questions are web-scraped from reddit in real-time and saved as a formatted md files. The subreddit that the scraped questions are from is **/r/dailyprogrammer**. Choose an easy (default), intermediate, hard or random difficulty question. The application is implemented with **Python**, utilizing [click](https://github.com/pallets/click) package and [praw](https://github.com/praw-dev/praw) api wrapper.
+Get coding questions instantly. A cli app that gets a number of coding question(s) of varying difficulty. Questions are web-scraped from reddit in real-time and saved as a formatted md files. The subreddit that the scraped questions are from is **/r/dailyprogrammer**. Choose an easy, intermediate, hard or random difficulty question. The application is implemented with **Python**, utilizing [click](https://github.com/pallets/click) package and [praw](https://github.com/praw-dev/praw) api wrapper.
 
 ## Demo
 <img src="Img/demo_cli.gif">
