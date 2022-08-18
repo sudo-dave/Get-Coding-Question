@@ -1,11 +1,9 @@
 import os
 import click
-import scrape
+import app.scrape as scrape
 import random
 import pickle
 from operator import itemgetter
-
-CHOICE_DIFF = {"E": "Easy", "MD": "Intermediate", "H": "Hard"}
 
 
 @click.group()
@@ -77,6 +75,9 @@ def config(ctx):
     click.echo("Saved info @ "+config_file)
 
 
+CHOICE_DIFF = {"E": "Easy", "MD": "Intermediate", "H": "Hard"}
+
+
 @main.command()
 @click.option('--n', default=1, type=click.IntRange(1, 10), show_default=True, help="The number of questions generated.")
 @click.option('--diff', type=click.Choice(['E', 'MD', 'H']),  help="The difficulty of the questions. Default is random difficulty")
@@ -96,7 +97,7 @@ def get(ctx, n, diff):
     lvl = CHOICE_DIFF.get(diff) if diff else random.choice(
         list(CHOICE_DIFF.values()))
 
-    r = scrape.Obj(client_id, secret, user_agent)
+    r = scrape.Reddit(client_id, secret, user_agent)
 
     click.echo(f"--Getting {lvl} {txt_q}--")
     submissions = r.getRandomSubmissions(lvl, n)

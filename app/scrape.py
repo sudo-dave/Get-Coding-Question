@@ -3,7 +3,7 @@ import praw
 import random
 
 
-class Obj:
+class Reddit:
     def __init__(self, client_id, secret, user_agent):
         reddit = praw.Reddit(
             client_id=client_id, client_secret=secret, user_agent=user_agent)

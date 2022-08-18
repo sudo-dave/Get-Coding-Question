@@ -3,12 +3,12 @@ from setuptools import setup
 setup(
     name="codeq",
     version='0.1',
-    py_modules=['cli', 'scrape'],
+    packages=["app"],
     install_requires=[
         'Click', 'praw'
     ],
     entry_points='''
         [console_scripts]
-        codeq=cli:main
+        codeq=app.cli:main
     ''',
 )
