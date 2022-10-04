@@ -10,6 +10,7 @@ Get coding questions instantly. A cli app that gets a number of coding question(
 ### Installation
 ```bash
 $ git clone https://github.com/sudo-dave/cli-codeQ
+$ cd cli-codeQ/
 $ python setup.py install
 ```
 ### Configure
